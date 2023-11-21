@@ -26,14 +26,14 @@ function Navbar() {
       </Link>
 
       <ul
-        className={`hiddesn h-fulls gap-12 lg:flex ${
+        className={` h-fulls gap-12 lg:flex ${
           showSideBar
-            ? "flex flex-col gap-5 pt-6 fixed top-0 right-0 h-full z-20  bg-slate-200 w-[15rem] transition-all duration-200 ease-in-out"
+            ? "flex flex-col gap-5 pt-6 fixed top-0 right-0 h-full z-20  bg-gray-100 w-[15rem] transition-all duration-200 ease-in-out"
             : "hidden"
         }`}
       >
         {showSideBar && (
-          <li>
+          <li className="bg-red-500 w-fit">
             <Image
               src="close.svg"
               alt="close"
@@ -73,7 +73,7 @@ function Navbar() {
       />
       {showSideBar && (
         <div
-          className="fixed top-0 left-o right-0 bottom-0 w-full h-full z-10 bg-[rgba(211,211,211,0.3)]"
+          className="fixed top-0 left-0 right-0 bottom-0 w-full h-full z-10 bg-black opacity-50"
           onClick={closeSideBar}
         />
       )}
