@@ -1,3 +1,4 @@
+import Features from "@/components/Features";
 import Camp from "@/components/Camp";
 import Guide from "@/components/Guide";
 import Hero from "@/components/Hero";
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <Camp />
       <Guide />
+      <Features />
     </>
   );
 }
