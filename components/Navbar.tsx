@@ -17,12 +17,7 @@ function Navbar() {
   return (
     <nav className="flexBetween max-container padding-container relative z-30 py-5">
       <Link href="/">
-        <Image
-          src="./hilink-logo.svg"
-          alt="logo"
-          width={74}
-          height={29}
-        />
+        <Image src="./hilink-logo.svg" alt="logo" width={74} height={29} />
       </Link>
 
       <ul
@@ -30,8 +25,7 @@ function Navbar() {
           showSideBar
             ? "flex flex-col gap-5 pt-6 fixed top-0 right-0 h-full z-20  bg-gray-100 w-[15rem] transition-all duration-200 ease-in-out"
             : "hidden"
-        }`}
-      >
+        }`}>
         {showSideBar && (
           <li className="bg-red-500 w-fit">
             <Image
@@ -47,11 +41,23 @@ function Navbar() {
           <Link
             href={link.href}
             key={link.key}
-            className="regular-16 text-ray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold"
-          >
+            className="regular-16 text-ray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
             {link.label}
           </Link>
         ))}
+
+        {showSideBar && (
+          <li>
+            <div className="flexCenter lg:hidden">
+              <Button
+                type="button"
+                title="Login"
+                icon="/user.svg"
+                variant="btn_dark_green"
+              />
+            </div>
+          </li>
+        )}
       </ul>
 
       <div className="lg:flexCenter hidden">
